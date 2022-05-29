@@ -19,7 +19,7 @@ Following the algorithm defined in [The Elements of Statistical Learning](https:
 
 2. Given a current seat of means ${m_{1}, ..., m_{K}}$, the total cluster variance is minimized by assigning each observation to the closest (current) cluster mean. That is,
 
-$$ C(i) = argmin\limits_{1 \leq k \leq K} ||x_{i} - m_{k}||^2$$
+$$ C(i) = argmin_{1 \leq k \leq K} ||x_{i} - m_{k}||^2$$
 
 3. Repeat steps 1 and 2 until the assignments do not change
 
