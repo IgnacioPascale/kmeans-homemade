@@ -58,7 +58,7 @@ class KMeans:
         self._init_clusters()
         self.n_iter = 0
         # We need copy for numpy matrices, otherwise objects will be modified
-        prev_centroids = self._centroids.copy()
+        prev_centroids = np.zeros([self.n_clusters, self.p])
 
         print(f"Fitting KMeans with {self.n_clusters} K")
         while 1:
