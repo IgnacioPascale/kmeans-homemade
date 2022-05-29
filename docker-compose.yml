@@ -4,14 +4,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: playground-ds
+    image: kmeans_homemade
     stdin_open: true
     tty: true
     environment:
       - JUPYTER_ENABLE_LAB=yes
       - JUPYTER_TOKEN=playground
     volumes:
-      - ${PWD}:/home/jovyan/work
+      - ${PWD}:/usr/src/kmeans_homemade
     ports:
       - 8000:8888
-    container_name: playground
+    container_name: kmeans_homemade
