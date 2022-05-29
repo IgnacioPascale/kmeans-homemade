@@ -15,9 +15,9 @@ After spinning up the container, or your preferred environment, go to `/notebook
 
 Following the algorithm defined in [The Elements of Statistical Learning](https://hastie.su.domains/ElemStatLearn/), we define the following algorithm:
 
-1. For a give cluster assignment $C$, the total cluster variance is minimized with respect to ${m_{1}, ..., {m_{K}}$ yielding the means of the currently assigned clusters.
+1. For a given cluster assignment $C$, the total cluster variance is minimized with respect to $m_{1}, ..., m_{K}$ yielding the means of the currently assigned clusters.
 
-2. Given a current seat of means ${m_{1}, ..., m_{K}}$, the total cluster variance is minimized by assigning each observation to the closest (current) cluster mean. That is,
+2. Given a current seat of means $m_{1}, ..., m_{K}$, the total cluster variance is minimized by assigning each observation to the closest (current) cluster mean. That is,
 
 $$ C(i) = argmin_{1 \leq k \leq K} ||x_{i} - m_{k}||^2$$
 
@@ -39,4 +39,4 @@ You can try this using the Jupyter Notebook official Docker image.
 docker-compose down && docker-compose up --build -d
 ```
 
-Go to localhost:8000 or 127.0.0.1:8000 and start the notebook.
+Go to localhost:8000 or 127.0.0.1:8000 and start the notebook. The token (playground) is defined in the `Dockerfile`.
