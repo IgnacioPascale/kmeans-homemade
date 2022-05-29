@@ -35,7 +35,7 @@ $$ N_k = \sum_{i = 1}^N I(C(i) = k) $$
 
 # Provided Docker Environment
 
-You can try this using the Jupyter Notebook official Docker image.
+You can try this using a corresponding Python image:
 
 ```bash
 docker-compose down && docker-compose up --build -d
