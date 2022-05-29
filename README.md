@@ -9,13 +9,34 @@ This is my rather *lame* attempt at re-creating it with as little help as possib
 
 There is no why. This is a product of my boredoom.
 
+# Provided Docker Environment
+
+<details> <summary> Expand/Collapse </summary>
+
+You can try this using a corresponding Python image:
+
+```bash
+docker-compose down && docker-compose up --build -d
+```
+
+You can execute jupyter lab using a `Makefile`. Run:
+
+```bash
+make jupyterlab
+```
+
+Go to `localhost:8000`. The token (playground) is defined in the `Dockerfile`.
+</details>
+
 # Example Run
 
 After spinning up the container, or your preferred environment, go to `/notebooks` and you can run examples there.
 
 # The Algorithm
 
-Following the algorithm defined in [The Elements of Statistical Learning](https://hastie.su.domains/ElemStatLearn/), we define the following algorithm:
+<details> <summary> Expand/Collapse </summary>
+
+Following the algorithm defined in [The Elements of Statistical Learning](https://hastie.su.domains/ElemStatLearn/):
 
 1. For a given cluster assignment $C$, the total cluster variance is minimized with respect to $m_{1}, ..., m_{K}$ yielding the means of the currently assigned clusters.
 
@@ -33,18 +54,4 @@ where
 
 $$ N_k = \sum_{i = 1}^N I(C(i) = k) $$
 
-# Provided Docker Environment
-
-You can try this using a corresponding Python image:
-
-```bash
-docker-compose down && docker-compose up --build -d
-```
-
-You can execute jupyter lab using a `Makefile`. Run:
-
-```bash
-make jupyterlab
-```
-
-Go to `localhost:8000`. The token (playground) is defined in the `Dockerfile`.
+</details>
